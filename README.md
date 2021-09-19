@@ -1,5 +1,5 @@
 # Powershell UAC bypass
-Originally discordvered by Daniel Gebert
+Originally discovered by Daniel Gebert
 
 ---
 
