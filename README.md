@@ -66,7 +66,7 @@ Start-Sleep -s 1
 Remove-Item '\\?\C:\Windows \' -Force -Recurse
 ```
 First modification:\
-Build your DLL using visual studio code and upload it to filebin.\
+Build your DLL using visual studio code and upload it to filebin. My DLL adds a windows defender preference to not scan the TEMP directory\
 Replace the Invoke-WebRequest Uri with your link and replace the copy argument with the location of your application.\
 Now for the final step - Replace every new line with a semicolon and convert it into a batch script
 ```cmd
